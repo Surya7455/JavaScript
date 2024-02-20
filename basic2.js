@@ -19,4 +19,13 @@ let isLoggedIn = false
 
 //object
 
+/* Primitive date type // call by value 
+ 7 types : String, Number , Boolean, null, undefined, Symbol 
+*/
+// Stack (Memory is used in Primitive Data types)
+
+/* Reference (Non-primitive)
+Array, Objects, Functions
+*/
+// Heap (Memory is used in non-primitive data types) 
 
