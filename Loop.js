@@ -165,7 +165,51 @@ myCoding.forEach( (item) => {
 
 const myNums = [1,2,3,4,5,6,7,8,9]
 
-const newNums = myNums.filter( (num)=> {
-   return num >4
-})
-console.log(newNums);
+// const newNums = myNums.filter( (num)=> {
+//    return num >4
+// })
+// console.log(newNums);
+
+// const newNums = myNums.map((num)=> {return num +10} )
+
+const newNums = myNums
+                 .map((num) => num * 10 )
+                 .map((num)=> num+1)
+                 .filter((num) => num =>40 )
+//console.log(newNums);
+
+// ---->>>reduce() <<<----
+
+const myNumbers = [1,2,3,4,5]
+
+// myTotal = myNumbers.reduce(function (acc, currval){
+   // console.log(`acc ${acc} and currval : ${currval}`);
+//     return acc + currval
+// }, 0 )
+
+//console.log(myTotal);
+
+const myTotal  = myNumbers.reduce((acc, curr) =>acc+curr,0 )
+console.log(myTotal);
+
+const shoppinCart = [
+    { 
+        itemname : "js course",
+        price : 299
+    },
+    { 
+        itemname : "py course",
+        price : 399
+    },
+    { 
+        itemname : "c++ course",
+        price : 499
+    },
+    { 
+        itemname : "java course",
+        price : 999
+    }
+]
+
+const pricePay = shoppinCart.reduce((acc, item)=> acc + item.price ,0 )
+console.log(pricePay);
