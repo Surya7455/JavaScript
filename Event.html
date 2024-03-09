@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h2>Amazing Image</h2>
+    <ul id="images">
+        <li><img width="200px" id="Bean" src="Bean.jpg" alt=""></li>
+        <li><img width="200px" id="Jerry" src="Jerry.jpg" alt=""></li>
+        <li><img width="200px" id="Micky" src="Mic.jpg" alt=""></li>
+        <li><img width="200px" id="Oip" src="OIP.jpg" alt=""></li>
+        <li><img width="200px" id="Dora" src="download.jpg" alt=""></li>
+    </ul>
+</body>
+<script>
+    // attachEvent()
+    // jQuery - on
+    // type, timestam, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrkey, shiftkey, keyCode
+    // document.getElementById('Bean').onclick= function(){
+    //     alert("Mr. Bean clicked")
+    // }
+    // >>>---Best Approch---<<<
+    // document.getElementById('Jerry').addEventListener('click', function(){
+    //     alert("Jerry clicked")
+    // }, false)
+    
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('Jerry').addEventListener('click', function(e){
+    //     console.log("Jerry clicked");
+    //     e.stopPropagation();
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode
+        //removeIt.remove()
+        removeIt.parentNode.removeChild(removeIt)
+    })
+</script>
+</html>
